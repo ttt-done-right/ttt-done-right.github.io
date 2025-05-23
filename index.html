@@ -132,7 +132,7 @@
         </div>
       </div>
       <img src="./static/images/fig_utilization.png" alt="Hardware Utilization">
-      <p><strong>Figure 1</strong>.
+      <p class="has-text-justified"><strong>Figure 1</strong>.
         Using larger chunk sizes significantly improves GPU utilization compared
         to the original test-time training (TTT) method that even uses
         customized kernels <b>(a)</b>. This enhanced utilization enables
@@ -211,7 +211,7 @@
 
       <center><p>Online compressing 1 million tokens (128 images of 960x536 resolution) into fast weights. </p></center>
 
-      <br>
+      
     
 
       <div class="hero-body">
@@ -268,9 +268,9 @@
       <h2 class="title is-3">
         <center>Results on Language Modeling</center>
       </h2>
-        <img src="./static/images/lm_result.png" alt="Language Modeling">
+        <img src="./static/images/lm_result_v2.png" alt="Language Modeling">
 
-        <p><strong>Figure 5</strong>.
+        <p class="has-text-justified"><strong>Figure 5</strong>.
           Language Model results. 
           <b>(a, c)</b> Our model achieves lower per-position loss at larger
           token indices compared to GLA and DeltaNet at both 760M and 3B scale,
@@ -278,6 +278,9 @@
           <b>(b, d)</b> Our model consistently outperforms GLA and DeltaNet in
       retrieval accuracy. Furthermore, our Muon variant consistently outperforms
           our Momentum variant. 
+          <b>(e)</b> Validation loss at the final 2k tokens improves consistently as
+          the attention state size increases from 0.25x to 3x d^2, where d
+          denotes the model's feature dimension.
         </p>
         <br>
     </div>
